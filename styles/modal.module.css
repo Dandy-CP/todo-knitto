@@ -1,0 +1,26 @@
+.containerContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+}
+
+.input {
+  width: 90%;
+  height: 50px;
+  border-radius: 16px;
+  padding: 20px;
+}
+
+.buttonSubmit {
+  width: 150px;
+  height: 40px;
+  background-color: #4b69ff;
+  border-radius: 16px;
+  color: white;
+  font-weight: 700;
+  border: none;
+  margin-top: 50px;
+  cursor: pointer;
+}

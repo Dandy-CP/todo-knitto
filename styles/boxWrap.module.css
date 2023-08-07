@@ -1,0 +1,48 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  max-height: 90vh;
+  padding: 15px;
+  border-width: 3px;
+  border-style: dashed;
+  border-color: #ededee;
+  border-radius: 12px;
+  overflow-y: auto;
+}
+
+.headerCardBox {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+}
+
+.subCard {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+  padding: 5px;
+  border-radius: 16px;
+  cursor: pointer;
+}
+
+.subCard:hover {
+  background-color: #1c1d2214;
+  transition: 0.3s ease-in-out;
+}
+
+.headerCardBox .subCard p {
+  font-size: 14px;
+  font-weight: 600;
+  color: black;
+}
+
+.headerCardBox p {
+  font-size: 14px;
+  font-weight: 600;
+  color: rgba(28, 29, 34, 0.5);
+}
