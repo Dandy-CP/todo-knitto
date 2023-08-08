@@ -5,9 +5,7 @@ import { poppins } from "@/utils/fonts";
 import styles from "@/styles/Layout.module.css";
 import DotIcon from "@/public/icons/Ovals.svg";
 import LogoIcon from "@/public/icons/Logo.svg";
-import CalendarIcon from "@/public/icons/calendar.svg";
-import { IconHome2, IconUsers } from "@tabler/icons-react";
-import "react-toastify/dist/ReactToastify.css";
+import { IconHome2, IconUsers, IconCalendarFilled } from "@tabler/icons-react";
 
 interface ILayout {
   children?: ReactNode;
@@ -67,10 +65,10 @@ const Layout: FC<ILayout> = ({ children }) => {
 
       <div className={styles.wrapLayout}>
         <div className={styles.headerBar}>
-          <h1 className={poppins.className}>Welcome Back </h1>
+          <h1 className={poppins.className}>Welcome Back 👋</h1>
 
           <div className={styles.headerBarInformation}>
-            <Image src={CalendarIcon} alt="" />
+            <IconCalendarFilled color="black" size={20} />
             <p className={poppins.className}>{dateToday}</p>
             <Image
               src={"https://i.pravatar.cc/300"}

@@ -1,5 +1,6 @@
 import React, { ReactNode } from "react";
 import Modal from "react-modal";
+import styles from "@/styles/modal.module.css";
 
 interface IModal {
   children?: ReactNode;
@@ -9,7 +10,7 @@ interface IModal {
 
 const customStyles = {
   content: {
-    width: "80%",
+    width: "60%",
     height: 500,
     borderRadius: 16,
     top: "50%",
@@ -23,15 +24,17 @@ const customStyles = {
 
 const ModalIndex = ({ children, modalIsOpen, setModalIsOpen }: IModal) => {
   return (
-    <Modal
-      isOpen={modalIsOpen}
-      onRequestClose={() => {
-        setModalIsOpen(false);
-      }}
-      style={customStyles}
-    >
-      {children}
-    </Modal>
+    <div className={styles.content}>
+      <Modal
+        isOpen={modalIsOpen}
+        onRequestClose={() => {
+          setModalIsOpen(false);
+        }}
+        style={customStyles}
+      >
+        {children}
+      </Modal>
+    </div>
   );
 };
 

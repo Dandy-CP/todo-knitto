@@ -11,54 +11,69 @@ interface IFilter {
 const Filter = ({ tab, setPage, setTab }: IFilter) => {
   return (
     <div className={styles.warpFilter}>
-      <p
-        className={poppins.className}
-        style={{
-          backgroundColor: tab === "ALL" ? "#1c1d2214" : "transparent",
-        }}
+      <div
         onClick={() => {
           setPage(1);
           setTab("ALL");
         }}
       >
-        All Todo
-      </p>
-      <p
-        className={poppins.className}
-        style={{
-          backgroundColor: tab === "DONE" ? "#1c1d2214" : "transparent",
-        }}
+        <p
+          className={poppins.className}
+          style={{
+            backgroundColor: tab === "ALL" ? "#1c1d2214" : "transparent",
+          }}
+        >
+          All Todo
+        </p>
+      </div>
+
+      <div
         onClick={() => {
           setPage(1);
           setTab("DONE");
         }}
       >
-        Done
-      </p>
-      <p
-        className={poppins.className}
-        style={{
-          backgroundColor: tab === "NOT DONE" ? "#1c1d2214" : "transparent",
-        }}
+        <p
+          className={poppins.className}
+          style={{
+            backgroundColor: tab === "DONE" ? "#1c1d2214" : "transparent",
+          }}
+        >
+          Done
+        </p>
+      </div>
+
+      <div
         onClick={() => {
           setPage(1);
           setTab("NOT DONE");
         }}
       >
-        Not Done
-      </p>
-      <p
-        className={poppins.className}
-        style={{
-          backgroundColor: tab === "BOTH" ? "#1c1d2214" : "transparent",
-        }}
+        <p
+          className={poppins.className}
+          style={{
+            backgroundColor: tab === "NOT DONE" ? "#1c1d2214" : "transparent",
+          }}
+        >
+          Not Done
+        </p>
+      </div>
+
+      <div
         onClick={() => {
           setPage(1);
           setTab("BOTH");
         }}
       >
-        Show Both
-      </p>
+        <p
+          className={poppins.className}
+          style={{
+            backgroundColor: tab === "BOTH" ? "#1c1d2214" : "transparent",
+          }}
+        >
+          Show Both
+        </p>
+      </div>
     </div>
   );
 };

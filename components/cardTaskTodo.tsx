@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from "react";
-import Image from "next/image";
+import React from "react";
 import styles from "@/styles/cardTaskTodo.module.css";
 import { poppins } from "@/utils/fonts";
-import ProgressIcon from "@/public/icons/progressIcon.svg";
+import { IconList } from "@tabler/icons-react";
 
 interface IDataCard {
   title: string;
@@ -16,7 +15,7 @@ const CardTaskTodo = ({ title, status }: IDataCard) => {
 
       <div className={styles.progress}>
         <div className={styles.progressWrap}>
-          <Image src={ProgressIcon} alt="" width={16} height={16} />
+          <IconList color="gray" size={16} />
           <p className={poppins.className}>Progress</p>
         </div>
 

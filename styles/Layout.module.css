@@ -22,8 +22,10 @@
   width: 318px;
   background-color: #fff;
   padding: 25px;
-  filter: drop-shadow(0px 0px 10px rgba(28, 29, 34, 0.06));
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   height: auto;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
 }
 
 .titleSideBar {
@@ -83,7 +85,7 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 20px;
+  gap: 15px;
 }
 
 .infoWrap {
@@ -98,9 +100,9 @@
 }
 
 @media only screen and (max-width: 780px) {
-  /* .blackSide {
-    display: none;
-  } */
+  .blackSide {
+    width: 60px;
+  }
 
   .sideBarContent {
     display: none;

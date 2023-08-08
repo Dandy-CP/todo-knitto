@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import styles from "@/styles/users.module.css";
 import { poppins } from "@/utils/fonts";
+import Avatar from "@/public/avatar.jpg";
 
 interface IUsers {
   idUsers: number;
@@ -16,7 +17,7 @@ const CardUsers = ({ idUsers, name, username, email }: IUsers) => {
     <Link href={`/users/${idUsers}`}>
       <div className={styles.usersWrap}>
         <Image
-          src={"https://i.pravatar.cc/300"}
+          src={Avatar}
           alt=""
           width={36}
           height={36}

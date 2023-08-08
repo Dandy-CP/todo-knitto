@@ -1,8 +1,7 @@
 import React, { FC, ReactNode } from "react";
-import Image from "next/image";
 import { poppins } from "@/utils/fonts";
 import styles from "@/styles/boxWrap.module.css";
-import PlusIcon from "@/public/icons/plusIcon.svg";
+import { IconPlus } from "@tabler/icons-react";
 
 interface IBoxWrap {
   children?: ReactNode;
@@ -23,7 +22,7 @@ const BoxDashWrap: FC<IBoxWrap> = ({ children, title, modalAdd }) => {
               modalAdd(true);
             }}
           >
-            <Image src={PlusIcon} alt="" width={18} height={18} />
+            <IconPlus color="black" size={18} />
             <p className={poppins.className}>Add New Task</p>
           </div>
         )}

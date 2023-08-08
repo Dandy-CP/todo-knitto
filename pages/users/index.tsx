@@ -15,7 +15,7 @@ const Index = ({
 
       <div className={styles.container}>
         {users.map((value) => (
-          <>
+          <div key={value.id}>
             <CardUsers
               key={value.id}
               idUsers={value.id}
@@ -24,7 +24,7 @@ const Index = ({
               email={value.email}
             />
             <hr className={styles.hardLineBreak} />
-          </>
+          </div>
         ))}
       </div>
     </div>
@@ -39,7 +39,7 @@ export const getServerSideProps = wrapper.getServerSideProps(
     store.dispatch(
       getUsers.initiate({
         limit: limit === null ? 10 : limit,
-        page: page === null ? 0 : page,
+        page: page === null ? 1 : page,
       })
     );
 

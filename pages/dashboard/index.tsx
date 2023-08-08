@@ -156,7 +156,7 @@ const Index = ({
 
       <ModalIndex modalIsOpen={modalIsOpen} setModalIsOpen={setModalIsOpen}>
         <h1
-          style={{ textAlign: "center", fontSize: 23 }}
+          style={{ textAlign: "center", fontSize: 23, marginBottom: 20 }}
           className={poppins.className}
         >
           Add New Todo Task
@@ -196,11 +196,11 @@ export const getServerSideProps = wrapper.getServerSideProps(
     const page = Number(context.query.page);
     const limit = Number(context.query.limit);
 
-    if (tab === "ALL" || tab === "BOTH") {
+    if (tab === "ALL" || tab === "BOTH" || tab === undefined) {
       store.dispatch(
         getToDoList.initiate({
-          limit: limit === null ? 10 : limit,
-          page: page === null ? 0 : page,
+          limit: limit === undefined ? 10 : limit,
+          page: page === undefined ? 1 : page,
         })
       );
     }
@@ -209,8 +209,8 @@ export const getServerSideProps = wrapper.getServerSideProps(
       store.dispatch(
         getToDoByStatus.initiate({
           status: tab === "DONE" ? true : false,
-          limit: limit === null ? 10 : limit,
-          page: page === null ? 0 : page,
+          limit: limit === undefined ? 10 : limit,
+          page: page === undefined ? 1 : page,
         })
       );
     }
