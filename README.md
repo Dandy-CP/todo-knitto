@@ -1,6 +1,13 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Summary
+this project purpose to skill test
+
+this project UI/UX use [To do list dashboard (Freebie)](http://localhost:3000](https://www.figma.com/community/file/1156486092786444945/To-do-list-dashboard-(Freebie)))
+
+all icon use [@tabler/icons](https://tabler-icons.io/)
 
 ## Getting Started
+
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 First, run the development server:
 
